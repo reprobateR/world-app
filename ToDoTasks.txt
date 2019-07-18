@@ -1,0 +1,16 @@
+Calculate poorest continent by Per Capita, life expectancy and GDP.
+Calculate richest highest continent by Per Capita, life expectancy and GDP.
+Calculate per capita income of a country, display capital and head of state.
+List of countries that speak particular language?
+Get the country where the language spoken is higher than official language?
+Select country with highest population cities.
+Calculate population density and display life expectancy.
+Display number of years indepedence along with country, per capita income, life expectancy and population density.
+
+When a country is selected display all districts in that country, when a district is selected 
+Display its percentage population of the entire country. (Scroll bar ajax)
+To view more information about country or district  -> Click here, make a rest api call.
+Implement Session timeout, Pagination, hibernate caching, executor service and design patterns.
+
+country to city -> one to many mapping, bi directional
+many to many? language and country? or one to many -> one country many languages -> check
