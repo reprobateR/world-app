@@ -10,6 +10,7 @@ import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 
 import com.tlabs.worldapp.entity.Country;
+import com.tlabs.worldapp.util.CalculationUtil;
 
 @Repository
 @Transactional
@@ -25,11 +26,9 @@ public class WorldAppDAOImpl implements WorldAppDAO {
 		
 		//return (List<Article>) entityManager.createQuery(hql).getResultList();
 		
-		List list = entityManager.createQuery(hql).getResultList();
+		List<Country> list = entityManager.createQuery(hql).getResultList();
 		
-		list.forEach(System.out::println);
-		
-		return (List<Country>) list;
+		return list;
 	}
 	
 	

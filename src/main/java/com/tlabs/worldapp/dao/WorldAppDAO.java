@@ -8,5 +8,4 @@ public interface WorldAppDAO {
 	
 	public List<Country> getAllCountries(); 
 			
-
 }

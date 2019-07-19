@@ -1,8 +1,13 @@
 package com.tlabs.worldapp.entity;
 
+import java.util.Set;
+
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 @Entity
@@ -39,7 +44,7 @@ public class Country {
 	private Double lifeExpectancy;
 	
 	@Column(name="gnp")
-	private Double gnp;
+	private Float gnp;
 	
 	@Column(name="gnp_old")
 	private Double gnpOld;
@@ -58,6 +63,9 @@ public class Country {
 	
 	@Column(name="code2")
 	private String code2;
+	
+	@OneToMany(mappedBy = "country",cascade = CascadeType.ALL,fetch = FetchType.LAZY)
+	private Set<City> city;
 
 	public String getCode() {
 		return code;
@@ -123,11 +131,11 @@ public class Country {
 		this.lifeExpectancy = lifeExpectancy;
 	}
 
-	public Double getGnp() {
+	public Float getGnp() {
 		return gnp;
 	}
 
-	public void setGnp(Double gnp) {
+	public void setGnp(Float gnp) {
 		this.gnp = gnp;
 	}
 
@@ -177,6 +185,14 @@ public class Country {
 
 	public void setCode2(String code2) {
 		this.code2 = code2;
+	}
+	
+	public Set<City> getCity() {
+		return city;
+	}
+
+	public void setCity(Set<City> city) {
+		this.city = city;
 	}
 
 	@Override
